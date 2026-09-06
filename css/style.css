@@ -16,3 +16,11 @@
   font-weight: 400; /* 400 é o tamanho normal, de 100 a 700 */
   font-style: normal;
 }
+
+.menu {
+  display: flex;         /* Coloca os itens lado a lado */
+  list-style: none;      /* Remove as bolinhas da lista */
+  gap: 50px;             /* Define o espaço entre cada item */
+  padding: 0;            /* Remove o espaçamento interno padrão */
+  margin: 0;             /* Remove a margem padrão */
+}
