@@ -25,17 +25,23 @@
   margin: 0;             /* Remove a margem padrão */
 }
 
-.container-msg {
+.container {
   display: flex;       /* Coloca a ul e o form lado a lado */
   gap: 0px;          /* Espaço entre a lista e o formulário */
   align-items: start; /* Alinha o topo de ambos os elementos */
 }
 
 /* Opcional: define larguras para cada lado */
-.container-msg ul {
+.container ul {
   flex: 1; /* Ocupa 1 parte do espaço */
 }
 
-.container-msg form {
+.container form {
   flex: 2; /* Ocupa 2 partes do espaço */
+}
+
+pre {
+    white-space: pre-wrap;       /* Quebra a linha automaticamente */
+    word-wrap: break-word;       /* Evita que palavras muito longas vazem */
+    font-family: inherit;        /* Opcional: remove a fonte "monoespaçada" padrão do <pre> */
 }
