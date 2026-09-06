@@ -45,3 +45,9 @@ pre {
     word-wrap: break-word;       /* Evita que palavras muito longas vazem */
     font-family: inherit;        /* Opcional: remove a fonte "monoespaçada" padrão do <pre> */
 }
+
+.ft-perf {
+    width: 100%;         /* Ocupa 100% do espaço disponível... */
+    max-width: 300px;    /* ...mas trava em no máximo 300px em telas maiores */
+    height: auto;        /* Mantém a proporção da imagem para não achatar */
+}
