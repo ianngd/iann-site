@@ -5,15 +5,15 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-border-box;
-  font-family: "Roboto Mono", monospace;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 /* Classe utilitária específica */
-.roboto-mono {
-  font-family: "Roboto Mono", monospace;
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400; /* 400 é o tamanho normal, de 100 a 700 */
+  font-weight: 400; /* Peso normal; altere entre 200 e 800 conforme necessário */
   font-style: normal;
 }
 
