@@ -1,3 +1,15 @@
+/* =========================================
+   Desgrudando o conteudo da margem da página
+   ========================================= */
+
+
+main {
+    padding: 0 20px;   /* Adiciona 20px de respiro nas laterais (esquerda e direita) */
+    max-width: 1200px; /* Opcional: Impede que o site estique infinitamente em monitores ultrawide */
+    margin: 0 auto;    /* Opcional: Centraliza o bloco principal na tela do computador */
+}
+
+
 
 /* =========================================
    Fonte diferente para o site
@@ -151,4 +163,36 @@ nav a {
 /* Opcional: Adiciona um efeito visual ao passar o mouse, já que ele não parece mais um link comum */
 nav a:hover {
     color: #666;           /* Deixa a cor levemente mais clara ao passar o mouse */
+}
+
+/* =========================================
+   Personalizando a contração do menu para telas menores
+   ========================================= */
+
+/* Esconde a caixinha nativa do checkbox */
+.menu-toggle {
+    display: none; 
+}
+
+/* Estiliza e exibe o botão hambúrguer no celular */
+.menu-icon {
+    display: block; 
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+/* Esconde os links no celular e remove as bolinhas da lista */
+.menu {
+    display: none; 
+    flex-direction: column;
+    gap: 15px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* Quando clicar no ícone (marcar o checkbox), exibe a lista */
+.menu-toggle:checked ~ .menu {
+    display: flex;
 }
