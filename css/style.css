@@ -51,3 +51,13 @@ pre {
     max-width: 300px;    /* ...mas trava em no máximo 300px em telas maiores */
     height: auto;        /* Mantém a proporção da imagem para não achatar */
 }
+
+nav a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #333;           /* Define uma cor fixa (ex: cinza escuro) e impede que fique roxo após clicado */
+}
+
+/* Opcional: Adiciona um efeito visual ao passar o mouse, já que ele não parece mais um link comum */
+nav a:hover {
+    color: #666;           /* Deixa a cor levemente mais clara ao passar o mouse */
+}
