@@ -1,3 +1,8 @@
+
+/* =========================================
+   Fonte diferente para o site
+   ========================================= */
+
 /* Importa a fonte Roboto Mono do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
@@ -76,17 +81,67 @@
     }
 }
 
+
+/* =========================================
+   Ajustes Específicos para o Formulário no Mobile
+   ========================================= */
+
+/* Aumenta a largura dos campos e textarea no mobile para ~90% */
+.container input[type="text"],
+.container textarea {
+    width: calc(100% - 20px); /* Ocupa quase toda a largura, deixando respiro */
+    padding: 10px;             /* Aumenta a área de toque interna */
+    font-size: 16px;           /* Tamanho de fonte bom para leitura no mobile */
+    margin-bottom: 10px;      /* Espaço entre os campos */
+    max-width: 100%;          /* Impede que o campo transborde */
+}
+
+/* Garante que o botão 'Enviar' também fique responsivo */
+.container input[type="submit"] {
+    width: calc(100% - 20px); /* Mesma largura dos campos */
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* =========================================
+   Ajustes Específicos para o Formulário no Computador
+   ========================================= */
+@media (min-width: 768px) {
+    /* No PC, você pode querer restringir um pouco a largura máxima para não esticar demais */
+    .container input[type="text"],
+    .container textarea,
+    .container input[type="submit"] {
+        max-width: 400px; /* Limita a largura máxima no PC */
+        margin-left: 0;   /* Alinha à esquerda no PC, se preferir */
+    }
+}
+
+/* =========================================
+   Ajustando a organização do texto em sobre mim
+   ========================================= */
+
+
 pre {
     white-space: pre-wrap;       /* Quebra a linha automaticamente */
     word-wrap: break-word;       /* Evita que palavras muito longas vazem */
     font-family: inherit;        /* Opcional: remove a fonte "monoespaçada" padrão do <pre> */
 }
 
+/* =========================================
+   Responsividade da imagem
+   ========================================= */
+
+
 .ft-perf {
     width: 100%;         /* Ocupa 100% do espaço disponível... */
     max-width: 300px;    /* ...mas trava em no máximo 300px em telas maiores */
     height: auto;        /* Mantém a proporção da imagem para não achatar */
 }
+
+/* =========================================
+   Personalizando os links do menu
+   ========================================= */
+
 
 nav a {
     text-decoration: none; /* Remove o sublinhado */
