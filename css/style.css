@@ -25,19 +25,55 @@
   margin: 0;             /* Remove a margem padrão */
 }
 
+/* =========================================
+   1. CELULAR (Comportamento Padrão)
+   ========================================= */
 .container {
-  display: flex;       /* Coloca a ul e o form lado a lado */
-  gap: 0px;          /* Espaço entre a lista e o formulário */
-  align-items: start; /* Alinha o topo de ambos os elementos */
+    display: flex;
+    flex-direction: column; /* Empilha tudo na vertical */
+    align-items: center;    /* Centraliza na tela */
+    gap: 30px;              /* Espaço entre imagem, ícones e form */
 }
 
-/* Opcional: define larguras para cada lado */
-.container ul {
-  flex: 1; /* Ocupa 1 parte do espaço */
+/* Ícones das redes sociais lado a lado no celular para poupar espaço */
+.menu-redes {
+    display: flex;
+    flex-direction: row; 
+    gap: 15px;
+    padding: 0;
+    margin: 0;
 }
 
-.container form {
-  flex: 2; /* Ocupa 2 partes do espaço */
+/* Removemos a proporção do celular para o form e ul ocuparem 100% da largura */
+.container ul, .container form {
+    flex: none;
+    width: 100%;
+}
+
+
+/* =========================================
+   2. COMPUTADOR (Telas maiores que 768px)
+   ========================================= */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;     /* Volta a colocar lado a lado */
+        align-items: flex-start; /* Alinha o topo (igual seu código original) */
+        gap: 20px;               /* Dá um pequeno respiro entre as colunas */
+    }
+
+    /* Trazendo de volta a sua regra de proporção para o PC! */
+    .container ul {
+        flex: 1; /* Ocupa 1 parte do espaço */
+    }
+
+    .container form {
+        flex: 2; /* Ocupa 2 partes do espaço */
+    }
+
+    /* Volta os ícones para o formato de coluna vertical (como na imagem do PC) */
+    .menu-redes {
+        flex-direction: column; 
+    }
 }
 
 pre {
